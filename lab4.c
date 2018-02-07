@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv){
 
-int socket = socket(PF_PACKET.SOCK_RAW, htons(ETH_P_ALL)); // I want a socket where Im going to see the entire packet
+int socket = socket(PF_PACKET,SOCK_RAW, htons(ETH_P_ALL)); // I want a socket where Im going to see the entire packet
 struct sockaddr_ll addr, listenaddr;
 listenaddr.sll_family=AF_PACKET; // family exists for conversion stuill tell waht it originally was
 listenaddr.sll_protocol=htons(ETH_P_ALL);
